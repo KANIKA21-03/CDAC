@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banasthali Vidyapith Event Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('http://banasthali.org/banasthali/wcms/en/home/lower-menu/departments/arch_and_planning/images/news_arch.jpg'); /* Replace with Banasthali Vidyapith's logo URL */
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            background-color: #f4f4f4;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            padding-top: 300px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #0056b3;
+        }
+
+        .content {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Banasthali Vidyapith</h1>
+      </header>
+    <div class="container">
+        <div class="dropdown">
+            <button class="button dropbtn">Login</button>
+            <div class="dropdown-content">
+                        <a href="student_form.html">student</a>
+                        <a href="admin_form.html">Admin</a>
+            </div>
+        </div>
+        <button class="button" id="contactBtn">Contact</button>
+        <button class="button" id="aboutBtn">About Us</button>
+    </div>
+
+    <div class="content" id="infoContent"></div>
+
+    <script>
+        const contactBtn = document.getElementById('contactBtn');
+        const aboutBtn = document.getElementById('aboutBtn');
+        const infoContent = document.getElementById('infoContent');
+
+        const contactInfo = `
+            <h2>Contact Us</h2>
+            <p>Banasthali Vidyapith,</p>
+            <p>P.O. Banasthali Vidyapith,</p>
+            <p>Rajasthan - 304022, India</p>
+            <p>Email: info@banasthali.in</p>
+            <p>Phone: +91-1438-228383</p>
+        `;
+
+        const aboutInfo = `
+            <h2>About Us</h2>
+            <p>Banasthali Vidyapith is a fully residential women's university offering an integrated system extending from the primary to the Ph.D. level. Banasthali Vidyapith was founded on October 6, 1935, by Pandit Hiralal Shastri and Ratan Shastri in memory of their beloved daughter Shantabai.</p>
+            <p>The Vidyapith has made substantial contributions in the field of women’s education, empowerment, and nation-building. With a campus spread over 850 acres, Banasthali Vidyapith offers a wide array of educational programs with a focus on holistic development.</p>
+        `;
+
+        contactBtn.addEventListener('mouseover', () => {
+            infoContent.innerHTML = contactInfo;
+            infoContent.style.display = 'block';
+        });
+
+        aboutBtn.addEventListener('mouseover', () => {
+            infoContent.innerHTML = aboutInfo;
+            infoContent.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
