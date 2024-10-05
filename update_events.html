@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        ul li span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .edit-btn {
+            color: #007bff;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .edit-btn:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Event</h2>
+        <ul id="eventList">
+            <!-- Event items will be populated here -->
+            <li>
+                <span>Seminar on AI</span>
+                <span class="edit-btn" onclick="editEvent(1)">✏️</span>
+            </li>
+            <li>
+                <span>Workshop on Web Development</span>
+                <span class="edit-btn" onclick="editEvent(2)">✏️</span>
+            </li>
+            <li>
+                <span>Conference on Data Science</span>
+                <span class="edit-btn" onclick="editEvent(3)">✏️</span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript to handle editing (you'll replace this with actual backend interaction)
+        function editEvent(eventId) {
+            // Redirect to edit event form passing the event ID
+            window.location.href = `edit_event.php?event_id=${eventId}`;
+        }
+    </script>
+</body>
+</html>
