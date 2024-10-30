@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Club</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, .radio-group {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Club</h2>
+        <form action="#" method="POST">
+            <!-- College Club -->
+            <label for="collegeClub">College Club:</label>
+            <select id="collegeClub" name="collegeClub" required>
+                <option value="">Select College Club</option>
+                <option value="scienceClub">Science Club</option>
+                <option value="musicClub">Music Club</option>
+                <option value="artClub">Art Club</option>
+                <option value="techClub">Tech Club</option>
+                <option value="sportsClub">Sports Club</option>
+            </select>
+
+            <!-- Venue -->
+            <label for="venue">Venue:</label>
+            <input type="text" id="venue" name="venue" placeholder="Enter venue" required>
+
+            <!-- Open Participation -->
+            <label>Open Participation:</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="openParticipation" value="yes" required> Yes
+                </label>
+                <label>
+                    <input type="radio" name="openParticipation" value="no" required> No
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Club</button>
+        </form>
+    </div>
+</body>
+</html>
